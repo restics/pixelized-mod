@@ -1,0 +1,8 @@
+{
+  "item.pixelizedmod.topaz" : "Topaz",
+  "item.pixelizedmod.pepper" : "Jalapeno",
+  "block.pixelizedmod.topaz_ore" : "Topaz Ore",
+  "block.pixelizedmod.topaz_block" : "Topaz Block",
+  "block.pixelizedmod.count_block" : "Counting Block",
+  "itemGroup.pixelizedmod.pixelized" : "Pixelized Mod"
+}

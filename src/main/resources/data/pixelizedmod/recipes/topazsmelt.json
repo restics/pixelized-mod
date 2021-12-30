@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "pixelizedmod:topaz_ore"
+  },
+  "result": "pixelizedmod:topaz",
+  "experience": 0.15,
+  "cookingtime": 200
+}
