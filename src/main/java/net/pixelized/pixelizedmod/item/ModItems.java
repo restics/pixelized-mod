@@ -6,10 +6,13 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.minecraft.item.ToolMaterial;
+import net.minecraft.item.ToolMaterials;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.pixelized.pixelizedmod.PixelizedMod;
 import net.pixelized.pixelizedmod.item.custom.Pepper;
+import net.pixelized.pixelizedmod.item.custom.ThorHammer;
 
 public class ModItems {
 
@@ -17,6 +20,8 @@ public class ModItems {
 
     public static final Pepper PEPPER = (Pepper) registerItem("pepper", new Pepper(new FabricItemSettings().food(new FoodComponent.Builder().hunger(2).saturationModifier(0.2f).statusEffect(
             new StatusEffectInstance(StatusEffects.STRENGTH, 100, 0), 1.0f).build()).group(ModItemGroup.PIXELIZED)));
+
+    public static final ThorHammer THORHAMMER = (ThorHammer) registerItem("thorhammer", new ThorHammer(ModToolMaterial.HAMMER,5,-3.5f, new FabricItemSettings().group(ModItemGroup.PIXELIZED)));
 
 
     private static Item registerItem(String name, Item item){
