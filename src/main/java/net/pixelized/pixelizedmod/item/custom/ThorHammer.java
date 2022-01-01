@@ -16,6 +16,7 @@ public class ThorHammer extends PickaxeItem {
         super(toolMaterial, attackDamage, attackSpeed, settings);
     }
 
+    @Override
     public boolean postHit(ItemStack stack, LivingEntity target, LivingEntity attacker) {
         World world = attacker.getWorld();
         if (rand.nextInt(100) > 75) {

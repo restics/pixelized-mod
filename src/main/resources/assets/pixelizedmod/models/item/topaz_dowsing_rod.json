@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "pixelizedmod:item/topaz_dowsing_rod"
+  }
+}

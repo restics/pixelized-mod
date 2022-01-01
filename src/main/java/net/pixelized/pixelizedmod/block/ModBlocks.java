@@ -21,7 +21,7 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.of(Material.STONE).strength(2,3).requiresTool()));
 
     public static final CounterBlock COUNT_BLOCK = (CounterBlock) registerBlock("count_block",
-            new CounterBlock(AbstractBlock.Settings.of(Material.STONE).strength(2,3).requiresTool()));
+            new CounterBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(1,50).requiresTool()));
 
 
 

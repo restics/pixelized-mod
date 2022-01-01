@@ -3,6 +3,7 @@ package net.pixelized.pixelizedmod;
 import net.fabricmc.api.ModInitializer;
 import net.pixelized.pixelizedmod.block.ModBlocks;
 import net.pixelized.pixelizedmod.item.ModItems;
+import net.pixelized.pixelizedmod.sounds.ModSounds;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -23,7 +24,7 @@ public class PixelizedMod implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-
+		ModSounds.registerSounds();
 		LOGGER.info("Pixelized Mod is online!");
 	}
 }
