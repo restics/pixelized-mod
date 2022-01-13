@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": {"model" :  "pixelizedmod:block/count_block"}
+  }
+}

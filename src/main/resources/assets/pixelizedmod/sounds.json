@@ -1,0 +1,9 @@
+{
+  "sus_music": {
+    "category" : "blocks",
+    "subtitle" : "pixelizedmod.sus_music",
+    "sounds": [
+      "pixelizedmod:sus_music"
+    ]
+  }
+}
