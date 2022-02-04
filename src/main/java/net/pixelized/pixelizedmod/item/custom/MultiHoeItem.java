@@ -11,7 +11,6 @@ import net.minecraft.block.FarmlandBlock;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.ItemUsageContext;
 import net.minecraft.item.ToolMaterial;
-import net.minecraft.text.LiteralText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
@@ -34,8 +33,9 @@ public class MultiHoeItem extends HoeItem {
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
         Direction dir = Objects.requireNonNull(context.getPlayer()).getMovementDirection();
-        tillLooped(context, dir);
-        return super.useOnBlock(context);
+        ActionResult r = super.useOnBlock(context);
+        if (r != ActionResult.PASS) tillLooped(context, dir);
+        return r;
     }
 
     public void tillLooped(ItemUsageContext context, Direction dir){
@@ -73,7 +73,6 @@ public class MultiHoeItem extends HoeItem {
                 break;
 
         }
-        context.getPlayer().sendMessage(new LiteralText(dir.toString()), false);
         for(int x = 0; x < tempLength; x++){
             for(int z = 0; z < tempWidth; z++){
                 BlockPos position = new BlockPos(xPos + x + xOffset,yPos,zPos + z + zOffset);
