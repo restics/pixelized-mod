@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " ##",
+    " * ",
+    " * "
+  ],
+  "key": {
+    "#" : {
+      "item": "pixelizedmod:topaz"
+    },
+    "*" : {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item" : "pixelizedmod:topaz_block"
+  }
+}

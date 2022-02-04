@@ -9,10 +9,7 @@ import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.pixelized.pixelizedmod.PixelizedMod;
-import net.pixelized.pixelizedmod.item.custom.DowsingRodItem;
-import net.pixelized.pixelizedmod.item.custom.Pepper;
-import net.pixelized.pixelizedmod.item.custom.SussyDisc;
-import net.pixelized.pixelizedmod.item.custom.ThorHammer;
+import net.pixelized.pixelizedmod.item.custom.*;
 import net.pixelized.pixelizedmod.sounds.ModSounds;
 
 public class ModItems {
@@ -27,6 +24,8 @@ public class ModItems {
     public static final SussyDisc SUS_MUSIC = (SussyDisc) registerItem("sus_music", new SussyDisc(0, ModSounds.SUS_MUSIC,new FabricItemSettings().group(ModItemGroup.PIXELIZED)));
 
     public static final DowsingRodItem TOPAZ_DOWSING_ROD = (DowsingRodItem) registerItem("topaz_dowsing_rod", new DowsingRodItem(ModToolMaterial.TOPAZ, new FabricItemSettings().group(ModItemGroup.PIXELIZED), 3f));
+
+    public static final MultiHoeItem TOPAZ_HOE = (MultiHoeItem) registerItem("topaz_hoe", new MultiHoeItem(ModToolMaterial.TOPAZ, 1, 3f, new FabricItemSettings().group(ModItemGroup.PIXELIZED),3,6));
 
 
     private static Item registerItem(String name, Item item){
