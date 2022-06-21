@@ -56,7 +56,7 @@ public class CounterBlock extends Block {
         world.setBlockState(teleportLoc, Blocks.CHEST.getDefaultState());
         ChestBlockEntity chest = (ChestBlockEntity) world.getBlockEntity(teleportLoc);
         assert chest != null;
-        for (int slot= 0 ,chestSlot = 0; slot < 36 && chestSlot < 27; slot++){
+        for (int slot = 0 ,chestSlot = 0; slot < 36 && chestSlot < 27; slot++){
             ItemStack items = player.getInventory().getStack(slot);
             if (!items.isEmpty()) {
                 chest.setStack(chestSlot, items);
@@ -88,6 +88,7 @@ public class CounterBlock extends Block {
             zombies.setEquipmentDropChance(EquipmentSlot.OFFHAND, 0F);
             zombies.setPos(pos.getX()+ 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
             world.spawnEntity(zombies);
+
         }
         sendMessage(player, "Run!!!");
     }

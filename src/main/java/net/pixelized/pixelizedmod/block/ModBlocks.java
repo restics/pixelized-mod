@@ -1,8 +1,10 @@
 package net.pixelized.pixelizedmod.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -10,7 +12,11 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.pixelized.pixelizedmod.PixelizedMod;
 import net.pixelized.pixelizedmod.block.custom.CounterBlock;
+import net.pixelized.pixelizedmod.block.custom.LightwoodLeaves;
+import net.pixelized.pixelizedmod.block.custom.LightwoodLog;
+import net.pixelized.pixelizedmod.block.custom.LightwoodSapling;
 import net.pixelized.pixelizedmod.item.ModItemGroup;
+import net.pixelized.pixelizedmod.world.features.tree.ModSaplingGenerator;
 
 public class ModBlocks {
 
@@ -22,6 +28,13 @@ public class ModBlocks {
 
     public static final CounterBlock COUNT_BLOCK = (CounterBlock) registerBlock("count_block",
             new CounterBlock(AbstractBlock.Settings.of(Material.DECORATION).strength(1,50).requiresTool()));
+
+    public static final Block LIGHTWOOD_LOG = registerBlock("lightwood_log",
+            new LightwoodLog(AbstractBlock.Settings.of(Material.WOOD).strength(2,3).requiresTool()));
+    public static final Block LIGHTWOOD_LEAVES = registerBlock("lightwood_leaves",
+            new LightwoodLeaves(FabricBlockSettings.copy(Blocks.OAK_LEAVES).nonOpaque()));
+    public static final Block LIGHTWOOD_SAPLING = registerBlock("lightwood_sapling",
+            new LightwoodSapling(new ModSaplingGenerator(), FabricBlockSettings.copy(Blocks.OAK_SAPLING)));
 
 
 
